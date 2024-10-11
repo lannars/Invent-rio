@@ -1,0 +1,37 @@
+package principal;
+
+import entidade.Produto;
+
+import java.util.Scanner;
+
+public class Teste {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("Quantos produtos deseja cadastrar? ");
+        int max = in.nextInt();
+
+
+        Produto[] produtos = new Produto[max];
+
+        for (int i = 0; i <max ; i++) {
+
+            in.nextLine();
+            System.out.println("Informe o nome do produto: ");
+            String tempNome = in.nextLine();
+            System.out.println("Informe a quantidade do item do item: ");
+            int tempQtde = in.nextInt();
+            System.out.println("Informe o número do item: ");
+            int tempNumero = in.nextInt();
+            System.out.println("Informe o valor do item: ");
+            double tempPreco = in.nextDouble();
+
+
+            produtos[i] = new Produto(tempNumero, tempNome, tempQtde, tempPreco);
+        }
+
+        for(Produto produto: produtos){
+            System.out.println(produto);
+        }
+    }
+}
