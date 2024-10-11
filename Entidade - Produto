@@ -1,0 +1,68 @@
+
+
+package entidade;
+
+public class Produto {
+
+    private int numerodoItem;
+    private String nome;
+    private int quantidadeEmEstoque;
+    private double preco;
+    private boolean ativo = true;
+
+    public Produto(int numerodoItem, String nome, int quantidadeEmEstoque, double preco) {
+        this.numerodoItem = numerodoItem;
+        this.nome = nome;
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+        this.preco = preco;
+    }
+
+    public int getNumerodoItem() {
+        return numerodoItem;
+    }
+
+    public void setNumerodoItem(int numerodoItem) {
+        this.numerodoItem = numerodoItem;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getQuantidadeEmEstoque() {
+        return quantidadeEmEstoque;
+    }
+
+    public void setQuantidadeEmEstoque(int quantidadeEmEstoque) {
+        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        this.preco = preco;
+    }
+
+    public boolean isAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(boolean ativo) {
+        this.ativo = ativo;
+    }
+
+    @Override
+    public String toString() {
+        return "\n\nNúmero do Item: " + this.numerodoItem + "\nNome: " + this.nome +
+                "\nQuantidade em Estoque: " + this.quantidadeEmEstoque +
+                "\nPreço: " + this.preco + "\nStatus do produto: " +
+                (this.ativo ? "Ativo" : "Descontinuado");
+    }
+
+}
